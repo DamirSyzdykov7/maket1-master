@@ -176,3 +176,65 @@ shapka
     margin-top: 20px;
 }
 /*ищбранные работы*/
+.featured {
+    margin-top: 28px;
+    margin-bottom: 84px;
+}
+
+.featured__title {
+    font-size: 22px;
+    margin-bottom: 36px;
+}
+
+.featured__card {
+    border-bottom: 1px solid #E0E0E0;
+    padding-bottom: 36px;
+    margin-bottom: 32px;
+    overflow: hidden;
+}
+
+.featured__image {
+    width: 246px;
+}
+
+.featured__image img{
+    border-radius: 6px;
+    width: 100%;
+}
+
+.featured__image, .featured__info {
+    float: left;
+}
+
+.featured__info {
+    width: calc(100% - 246px);
+    padding-left: 20px;
+}
+
+.featured__info-title {
+    font: 30px;
+    font-weight: 700;
+}
+
+.featured__year, .featured__tag {
+    float: left;
+}
+
+.featured__year {
+    background-color: #142850;
+    border-radius: 16px;
+    font-size: 18px;
+    font-weight: 900;
+    color: #FFF;
+    padding: 0 12px;
+}
+
+.featured__tag {
+    margin-left: 24px;
+    color: #8695A4;
+    font-size: 20px;
+}
+
+.featured__detail, .featured__text {
+    margin-top: 20px;
+}
