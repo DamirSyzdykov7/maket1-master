@@ -40,6 +40,11 @@ shapka
     text-decoration: none;
     font-size: 20px;
     font-weight: 500;
+    transition: 0.3s;
+}
+
+.header a:hover {
+    color: red;
 }
 
 /*блок автора*/
@@ -94,6 +99,11 @@ shapka
     border: none;
     cursor: pointer;
     margin-top: 40px;
+    transition: background-color 0.3;
+}
+
+.button:hover {
+    color: red;
 }
 
 /*
@@ -121,6 +131,11 @@ shapka
     text-decoration: none;
     font-size: 16px;
     color: #00A8CC;
+    transition: 0.3s;
+}
+
+.posts__header a:hover {
+    color: #0090b1;
 }
 
 .posts .wrapper {
@@ -139,6 +154,12 @@ shapka
     border-radius: 4px;
     padding: 24px;
     background-color: #FFF;
+    display: block;
+}
+
+a.posts__card {
+    text-decoration: none;
+    color: #21243D;
 }
 
 .posts__card:last-child{
@@ -186,6 +207,11 @@ shapka
     margin-bottom: 36px;
 }
 
+.featured__title_big {
+    font-size: 44px;
+    font-weight: 900;
+}
+
 .featured__card {
     border-bottom: 1px solid #E0E0E0;
     padding-bottom: 36px;
@@ -195,6 +221,7 @@ shapka
 
 .featured__image {
     width: 246px;
+    display: block;
 }
 
 .featured__image img{
@@ -214,6 +241,12 @@ shapka
 .featured__info-title {
     font: 30px;
     font-weight: 700;
+    text-decoration: none;
+    color: #21243D;
+}
+
+.featured__info-title:hover {
+    color: #353a62;
 }
 
 .featured__year, .featured__tag {
@@ -233,8 +266,58 @@ shapka
     margin-left: 24px;
     color: #8695A4;
     font-size: 20px;
+    display: block;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.featured__tag:hover {
+    color: #142850;
 }
 
 .featured__detail, .featured__text {
     margin-top: 20px;
+    text-decoration: none;
 }
+
+.footer {
+    margin-top: 84px;
+    padding: 52px 0;
+}
+
+.footer__copyright {
+    text-align: center;
+    width: 500px;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+.footer__icon {
+    float: left;
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    margin-right: 28px;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.footer__icon:hover {
+    transform: scale(1.2);
+}
+
+.footer__socials {
+    width: fit-content;
+    margin: 0 auto;
+    max-width: 312px;
+    margin-bottom: 28px;
+}
+
+.footer__icon img {
+    min-width: 37px;
+}
+
+.footer__icon:last-child {
+    margin-right: 0;
+}
+
