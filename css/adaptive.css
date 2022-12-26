@@ -1,0 +1,93 @@
+@media (max-width: 576px) {
+    .wrapper {
+        width: calc(100% - 30px);
+    }
+}
+
+
+/*
+шапка
+*/
+.header__burger {
+    display: none;
+    border: none;
+    float: right;
+    margin: 20px 20px 20px 0px;
+    background-color: transparent;
+}
+@media (max-width: 576px) {
+    .header__burger {
+        display: block;
+    }
+
+    .header__menu {
+        display: none;
+    }
+}
+
+/*
+подвал
+*/
+
+@media (max-width: 576px) {
+    .footer__copyright {
+        max-width: 290px;
+    }
+}
+
+/*
+первый экран
+*/
+
+@media (max-width: 886px) {
+    .author__info {
+        padding-right: 40px;
+    }
+
+    .author__title {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+
+    .author__text {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width:768px) {
+    .author__avatar {
+        float: none;
+        margin: 0 auto 24px;
+    }
+
+    .author__info {
+        width: 100%;
+        float: none;
+        padding-right: 0px;
+    }
+    .author {
+        margin-top: 64px;
+    }
+}
+
+@media (max-width:576px) {
+    .author {
+        margin-top: 24px;
+    }
+
+    .author__avatar {
+        width: 18px;
+    }
+
+    .author__title {
+        font-size: 32px;
+        -ms-overflow-style: 20px;
+    }
+
+    .author__text {
+        margin-bottom: 20px;
+    }
+    .author__info {
+        text-align: center;
+    }
+}

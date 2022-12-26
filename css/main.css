@@ -13,8 +13,9 @@ body {
 
 .wrapper {
     margin: 0 auto;
-    width: 856px;
+    width: calc(100% - 60px);
     overflow: hidden;
+    max-width: 856px;
 }
 
 /* 
