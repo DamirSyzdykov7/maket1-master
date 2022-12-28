@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&family=Rubik+80s+Fade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&display=swap');
 
 * {
     margin: 0;
@@ -7,19 +7,29 @@
 }
 
 body {
-    font-family: "Heebo";
+    font-family: 'Heebo';
+    color: #21243D;
     font-size: 16px;
 }
 
+/*
+  Обертка
+*/
 .wrapper {
     margin: 0 auto;
     width: calc(100% - 60px);
-    overflow: hidden;
     max-width: 856px;
 }
 
-/* 
-shapka
+/*
+  Сброс плавающих элементов
+*/
+.clearfix {
+    clear: both;
+}
+
+/*
+  Шапка
 */
 .header {
     overflow: hidden;
@@ -41,17 +51,23 @@ shapka
     text-decoration: none;
     font-size: 20px;
     font-weight: 500;
-    transition: 0.3s;
+    transition: color .3s;
 }
 
-.header a:hover {
-    color: red;
+.header a:hover,
+.header a.active
+ {
+    color: #FF6464;
 }
 
-/*блок автора*/
+/* Блок автор */
 .author {
     margin-top: 128px;
     margin-bottom: 72px;
+}
+
+.author .wrapper {
+    overflow: hidden;
 }
 
 .author__info {
@@ -68,53 +84,49 @@ shapka
 .author__avatar img {
     width: 100%;
     border-radius: 50%;
-    box-shadow: -6px 6px 0px #EDF7FA;  /* тень под картинкой*/
+    box-shadow: -6px 6px 0px #EDF7FA;
 }
 
 .author__title {
     font-size: 44px;
     font-weight: 700;
     line-height: 136%;
-    color: #21243D;
     margin-bottom: 40px;
 }
 
 .author__text {
     font-size: 16px;
-    color: #21243D;
     margin-bottom: 40px;
 }
 
 /*
-кнопка
+  Кнопка
 */
-
 .button {
-    color: #FFF;
+    color: #fff;
     background-color: #FF6464;
-    padding: 8px 20px;
+    border-radius: 2px;
     display: inline-block;
-    font-size: 20px ;
+    padding: 8px 20px;
+    font-size: 20px;
     font-weight: 500;
     text-decoration: none;
     border: none;
     cursor: pointer;
-    margin-top: 40px;
-    transition: background-color 0.3;
+    transition: background-color .3s;
 }
 
 .button:hover {
-    color: red;
+    background-color: #ee5959;
 }
 
 /*
-посты
+  Посты
 */
-
 .posts {
-    margin-top: 72px;
-    margin-bottom: 15px;
     background-color: #EDF7FA;
+    margin-top: 72px;
+    margin-bottom: 28px;
 }
 
 .posts__header {
@@ -127,12 +139,12 @@ shapka
     font-size: 22px;
 }
 
-.posts__header a{
+.posts__header a {
     float: right;
     text-decoration: none;
     font-size: 16px;
     color: #00A8CC;
-    transition: 0.3s;
+    transition: color .3s;
 }
 
 .posts__header a:hover {
@@ -140,8 +152,8 @@ shapka
 }
 
 .posts .wrapper {
-    padding-bottom: 32px;
     padding-top: 20px;
+    padding-bottom: 32px;
 }
 
 .posts__cards {
@@ -152,9 +164,9 @@ shapka
     width: calc(50% - 10px);
     float: left;
     margin-right: 20px;
+    background-color: #fff;
     border-radius: 4px;
     padding: 24px;
-    background-color: #FFF;
     display: block;
 }
 
@@ -163,7 +175,7 @@ a.posts__card {
     color: #21243D;
 }
 
-.posts__card:last-child{
+.posts__card:last-child {
     margin-right: 0;
 }
 
@@ -175,10 +187,7 @@ a.posts__card {
 .posts__date,
 .posts__tags {
     float: left;
-}
-
-.clearfix {
-    clear: both;
+    font-size: 18px;
 }
 
 .posts__date {
@@ -197,7 +206,10 @@ a.posts__card {
 .posts__card-text {
     margin-top: 20px;
 }
-/*ищбранные работы*/
+
+/*
+  Избранные работы
+*/
 .featured {
     margin-top: 28px;
     margin-bottom: 84px;
@@ -222,12 +234,16 @@ a.posts__card {
 
 .featured__image {
     width: 246px;
+    aspect-ratio: 41 / 30;
     display: block;
+    border-radius: 6px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
 }
 
-.featured__image img{
-    border-radius: 6px;
-    width: 100%;
+.featured__image img {
+    width: 1px;
 }
 
 .featured__image, .featured__info {
@@ -240,10 +256,12 @@ a.posts__card {
 }
 
 .featured__info-title {
-    font: 30px;
+    font-size: 30px;
     font-weight: 700;
+    display: block;
     text-decoration: none;
     color: #21243D;
+    transition: color .3s;
 }
 
 .featured__info-title:hover {
@@ -257,30 +275,32 @@ a.posts__card {
 .featured__year {
     background-color: #142850;
     border-radius: 16px;
+    color: #fff;
     font-size: 18px;
     font-weight: 900;
-    color: #FFF;
     padding: 0 12px;
 }
 
 .featured__tag {
     margin-left: 24px;
-    color: #8695A4;
     font-size: 20px;
+    color: #8695A4;
     display: block;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color .3s;
 }
 
 .featured__tag:hover {
-    color: #142850;
+    color: #6b7885;
 }
 
 .featured__detail, .featured__text {
     margin-top: 20px;
-    text-decoration: none;
 }
 
+/*
+  Подвал
+*/
 .footer {
     margin-top: 84px;
     padding: 52px 0;
@@ -293,6 +313,13 @@ a.posts__card {
     font-size: 14px;
 }
 
+.footer__socials {
+    margin: 0 auto;
+    width: fit-content;
+    max-width: 312px;
+    margin-bottom: 28px;
+}
+
 .footer__icon {
     float: left;
     width: 40px;
@@ -300,25 +327,18 @@ a.posts__card {
     text-align: center;
     margin-right: 28px;
     display: block;
-    transition: transform 0.3s;
+    transition: transform .3s;
 }
 
 .footer__icon:hover {
     transform: scale(1.2);
 }
 
-.footer__socials {
-    width: fit-content;
-    margin: 0 auto;
-    max-width: 312px;
-    margin-bottom: 28px;
+.footer__icon:last-of-type {
+    margin-right: 0;
 }
 
 .footer__icon img {
-    min-width: 37px;
-}
-
-.footer__icon:last-child {
-    margin-right: 0;
+    max-width: 37px;
 }
 

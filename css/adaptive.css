@@ -4,17 +4,17 @@
     }
 }
 
-
 /*
-шапка
+  Шапка
 */
 .header__burger {
     display: none;
     border: none;
     float: right;
-    margin: 20px 20px 20px 0px;
+    margin: 20px 20px 20px 0;
     background-color: transparent;
 }
+
 @media (max-width: 576px) {
     .header__burger {
         display: block;
@@ -26,9 +26,8 @@
 }
 
 /*
-подвал
+  Подвал
 */
-
 @media (max-width: 576px) {
     .footer__copyright {
         max-width: 290px;
@@ -36,9 +35,8 @@
 }
 
 /*
-первый экран
+  Первый экран
 */
-
 @media (max-width: 886px) {
     .author__info {
         padding-right: 40px;
@@ -54,40 +52,169 @@
     }
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
+    .author {
+        margin-top: 40px;
+    }
+
     .author__avatar {
         float: none;
-        margin: 0 auto 24px;
+        margin: 0 auto 32px;
     }
 
     .author__info {
-        width: 100%;
         float: none;
-        padding-right: 0px;
-    }
-    .author {
-        margin-top: 64px;
+        width: 100%;
+        padding-right: 0;
     }
 }
 
-@media (max-width:576px) {
+@media (max-width: 576px) {
     .author {
         margin-top: 24px;
     }
 
     .author__avatar {
-        width: 18px;
+        width: 180px;
+    }
+
+    .author__info {
+        text-align: center;
     }
 
     .author__title {
         font-size: 32px;
-        -ms-overflow-style: 20px;
+        margin-bottom: 20px;
     }
 
     .author__text {
         margin-bottom: 20px;
     }
-    .author__info {
-        text-align: center;
+}
+
+/*
+  Посты
+*/
+@media (max-width: 886px) {
+    .posts__date {
+        padding-right: 16px;
+    }
+
+    .posts__tags {
+        margin-left: 16px;
     }
 }
+
+@media (max-width: 768px) {
+    .posts__card-title {
+        font-size: 22px;
+    }
+
+    .posts__date,
+    .posts__tags {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 700px) {
+    .posts__card {
+        width: 100%;
+        float: none;
+        margin-right: 0;
+        margin-bottom: 16px
+    }
+
+}
+
+@media (max-width: 576px) {
+    .posts__date {
+        padding-right: 8px;
+    }
+
+    .posts__tags {
+        margin-left: 8px;
+    }
+
+    .posts__card:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .posts__card-info {
+        margin-top: 12px;
+    }
+
+    .posts__card-text {
+        margin-top: 12px;
+    }
+
+    .posts__header {
+        margin-bottom: 24px;
+    }
+
+    .posts__title {
+        font-size: 18px;
+        float: none;
+        text-align: center;
+    }
+
+    .posts__header a {
+        display: none;
+    }
+}
+
+/*
+  Избранные работы
+*/
+@media (max-width: 700px) {
+    .featured__info,
+    .featured__image {
+        float: none;
+    }
+
+    .featured__image {
+        width: 100%;
+        height: 230px;
+        aspect-ratio: none;
+        margin-bottom: 16px;
+    }
+
+    .featured__info {
+        padding-left: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .featured__title {
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 24px;
+    } 
+    
+    .featured__info-title {
+        font-size: 24px;
+    }
+    
+    .featured__year,
+    .featured__tag {
+        font-size: 16px;
+    }
+
+    .featured__tag {
+        margin-left: 20px;
+    }
+
+    .featured__detail,
+    .featured__text {
+        margin-top: 16px;
+    }
+}
+
+
+
+
+
+
+
+
+
